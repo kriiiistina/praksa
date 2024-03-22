@@ -36,11 +36,83 @@ $fontsize5: 12px;
 
 
 
+:root {
+    --base: $white;
+    --text: $black;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base: $black;
+      --text: $white;
+    }
+  }
+  
+  html {
+    color-scheme: dark light;
+  }
 
 
-body{
-    background-color: $black;
+  :root:has(#theme [value="dark"]:checked) {
+    color-scheme: dark;
+    --base: $black#;
+    --text: $white;
 }
+  :root:has(#theme [value="light"]:checked) {
+    color-scheme: light;
+    --base: $white;
+    --text: $black;
+}
+  
+  
+ 
+  
+  body {
+    color: var(--text);
+    background-color: var(--base);
+  }
+  input,
+
+  .opentime{
+    color: var(--text);
+    background-color: var(--base);
+ }
+
+ .section2-left{
+    color: var(--text);
+    background-color: var(--base);
+ }
+
+ .section4{
+    color: var(--text);
+    background-color: var(--base);
+ } 
+
+ .section7{
+    color: var(--text);
+    background-color: var(--base);
+ }
+
+
+  .with-scrollbar {
+    height: 300px;
+    overflow-y: scroll;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -87,11 +159,13 @@ a{
 }
 
 .links {
-    ul {
+    ul{
         display: flex;
         justify-content: flex-end;
     }
+    
 }
+
 
 
 #section0-logo{
@@ -106,15 +180,11 @@ a{
 .opentime{
     display: flex;
     height: 30px;
-    background-color: $black;
-    color: $white;
     justify-content:flex-end;
     align-items: center;
     padding-left: 1160px;
     
 }
-
-
 
 
 #section1-img{
@@ -170,7 +240,6 @@ a{
     flex-direction: column;
     font-family: $font1;
     font-size: $fontsize2;
-    color: $white;
 
 }
 
@@ -269,7 +338,7 @@ a{
     
 #section3-image{
     display: flex;
-    width: auto;
+    width: 50%;
 }
    
 }
@@ -285,8 +354,7 @@ a{
 #section4-h1{
     padding: 180px;
     font-size: $fontsize1;
-    font: $font1;
-    color: $white;
+    font-family: $font1;
     text-align: center;
     padding-top: 119px;
     padding-bottom: 16px;
@@ -294,8 +362,7 @@ a{
 
 #section4-h2{
     font-size: $fontsize1;
-    font: $font2;
-    color: $white;
+    font-family: $font2;
     text-align: center;
     padding-top: 16px;
     padding-bottom: 65px;
@@ -304,8 +371,7 @@ a{
 
 #section4-p{
     font-size: $fontsize2;
-    font: $font2;
-    color: $white;
+    font-family: $font2;
     text-align: center;
     padding-top: 65px;
     padding-bottom: 30px
@@ -384,23 +450,25 @@ a{
     padding-top: 8px;
     color: $white;
     font-size: $fontsize2;
-    font: $font1;
+    font-family: $font1;
 }
 
 #section5-p{
     padding-top: 33px;
     color: $white;
     font-size: $fontsize3;
-    font: $font2;
+    font-family: $font2;
 }
 
 
 
 
+
 .section6{
-    text-align: center;
-    padding-top: 193px;
-    
+    background-image: url("images/slika2");
+    background-attachment: fixed;
+    background-repeat: no-repeat, repeat-y;
+    display: none;
 }
 
 #section6-h1{
@@ -414,49 +482,77 @@ a{
     @include beloDugme()
 }
 
-#section6-image{
-    background-attachment: fixed;
-    background-size: cover;
+
+
+
+.section7{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section7-top{
+    display: flex;
+    flex-direction: row;
+    gap: 261px;
+}
+
+.section7-top-right{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#section7-top-image{
+    padding-top: 127px;
+    height: 201px;
+    width: 365;
+}
+
+#section7-h1{
+    padding-top: 167px;
+    padding-bottom: 32px
+}
+
+#section7-top-button{
+    @include crvenoDugme();
+}
+
+.section7-top-hr{
+    padding-top: 126px;
+    padding-bottom: 158px;
+}
+
+.section7-middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+
+
+.section7-middle-text{
+    display: flex;
+    flex-direction: row;
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.klasa5{
-    margin-top: 5000px;
+.footer-top{
+    height: 147px;
+    background-color: $red;
 }
 
-.klasa6{
-    margin-top: 5000px;
-}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    height: 27px;
+    background-color: #66000B;
 
-.klasa7{
-    margin-top: 5000px;
-}
-
-.klasa8{
-    margin-top: 5000px;
 }

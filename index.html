@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brath</title>
     <link rel="stylesheet" href="css/test.css"/>
+    <script src="script.js" ></script>
+    <link rel="icon" type="logo1.png" href="images/logo1.png">
 </head>
 <body>
 
-    
+
+
     <div class="section0-nav">
         <div class="container">
 
@@ -32,8 +35,15 @@
 
     <div class="opentime">
         <div class="container">
+            
             <p id="time" >Opentime:   Di. - Fr.: 07:00-13:00  und 15:00-18:30.    Sa.:	 07:30	-	12:30</p>
         </div>
+
+        <select data-theme-picker name="themepicker" id="theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+
     </div>
     <img id="section1-img" src="images/radnik.png" alt="worker">
 
@@ -173,37 +183,37 @@
     </div>
 
 
+
+
     <div class="section6">
-
-        <h2 id="section6-h1">Fleischversand</h2>
-
-        <button id="section6-button">Jetzt bestellen</button>
-    </div>
+            <h2 id="section6-h1">Fleischversand</h2>
+            <button id="section6-button">Jetzt bestellen</button>
         
-        <div class="section-6">
-            <img id="section6-image" src="images/slika2.png">
-    
-   </div>
+    </div>
 
 
 
 
-<div class="section-7">
+<div class="section7">
 
 
     <div class="section7-top">
+        
         <img id="section7-top-image" src="images/logo.PNG" alt="genusssnetz">
-
-        <h2 id="section7-p">Metzgerei Brath ist Mitglied 
+        
+        <div class="section7-top-right">
+        
+            <h2 id="section7-h1">Metzgerei Brath ist Mitglied <br>
             im Genussnetzwerk</h2>
-
+        
         <button id="section7-top-button">Gehen zu site</button>
+        </div>
     </div>
 
 
     <div class="section7-top-hr">
     <hr>
-    <img src="images/logo2.PNG" alt="logo">
+    <img id="section7-hr-logo" src="images/logo2.PNG" alt="logo">
     </div>
 
 
@@ -211,19 +221,19 @@
         <h2 id="section7-middle-h1">Auszeichnungen</h2>
 
             <div class="section7-middle-images">
-                <img src="images/gold1.PNG">
-                <img src="images/gold2.PNG">
-                <img src="images/gold3.PNG">
-                <img src="images/gold4.PNG">
+                <img id="1" src="images/gold1.PNG">
+                <img id="2" src="images/gold2.PNG">
+                <img id="3" src="images/gold3.PNG">
+                <img id="4" src="images/gold4.PNG">
             </div>
-
-            <div>
+        </div>
+            <div class="section7-middle-text">
                 <p>Tollit argumentum genau <br> Saepe lobortis</p>
                 <p>Schneewittchen <br>denique</p>
                 <p>Grimms Märchen <br>expetenda</p>
                 <p>Mettwurst mei <br>ullum gloriatur.</p>
             </div>
-    </div>
+    
 
     <div class="section7-middle-hr">
     <hr>
@@ -239,6 +249,9 @@
     </div>
 
 </div>
+
+
+
 
     <footer>
 
@@ -257,8 +270,9 @@
 
 <div class="footer-bottom">
         <div>
-            <div id="footer-bottom-p">
+            <div id="footer-bottom-p1">
                 <p>© 2020 by Metzgerei Heiko Brath  GmbH, Deutschland</p>
+                <div id="footer-bottom-p2"></div>
                 <p>Code and design by <a href="#">StudioPresent</a></p>
             </div>
         </div>

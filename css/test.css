@@ -1,5 +1,59 @@
+:root {
+  --base: $white;
+  --text: $black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base: $black;
+    --text: $white;
+  }
+}
+html {
+  color-scheme: dark light;
+}
+
+:root:has(#theme [value=dark]:checked) {
+  color-scheme: dark;
+  --base: $black#;
+  --text: $white;
+}
+
+:root:has(#theme [value=light]:checked) {
+  color-scheme: light;
+  --base: $white;
+  --text: $black;
+}
+
 body {
-  background-color: rgba(0, 0, 0, 0.9176470588);
+  color: var(--text);
+  background-color: var(--base);
+}
+
+input,
+.opentime {
+  color: var(--text);
+  background-color: var(--base);
+}
+
+.section2-left {
+  color: var(--text);
+  background-color: var(--base);
+}
+
+.section4 {
+  color: var(--text);
+  background-color: var(--base);
+}
+
+.section7 {
+  color: var(--text);
+  background-color: var(--base);
+}
+
+.with-scrollbar {
+  height: 300px;
+  overflow-y: scroll;
 }
 
 * {
@@ -51,8 +105,6 @@ a {
 .opentime {
   display: flex;
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.9176470588);
-  color: #FFFFFF;
   justify-content: flex-end;
   align-items: center;
   padding-left: 1160px;
@@ -106,7 +158,6 @@ a {
   flex-direction: column;
   font-family: Roboto Condensed;
   font-size: 22px;
-  color: #FFFFFF;
 }
 
 #section2-button1 {
@@ -213,7 +264,7 @@ a {
 }
 #section3-button #section3-image {
   display: flex;
-  width: auto;
+  width: 50%;
 }
 
 .section4 {
@@ -226,8 +277,7 @@ a {
 #section4-h1 {
   padding: 180px;
   font-size: 38px;
-  font: Roboto Condensed;
-  color: #FFFFFF;
+  font-family: Roboto Condensed;
   text-align: center;
   padding-top: 119px;
   padding-bottom: 16px;
@@ -235,8 +285,7 @@ a {
 
 #section4-h2 {
   font-size: 38px;
-  font: Roboto;
-  color: #FFFFFF;
+  font-family: Roboto;
   text-align: center;
   padding-top: 16px;
   padding-bottom: 65px;
@@ -244,8 +293,7 @@ a {
 
 #section4-p {
   font-size: 22px;
-  font: Roboto;
-  color: #FFFFFF;
+  font-family: Roboto;
   text-align: center;
   padding-top: 65px;
   padding-bottom: 30px;
@@ -323,19 +371,21 @@ a {
   padding-top: 8px;
   color: #FFFFFF;
   font-size: 22px;
-  font: Roboto Condensed;
+  font-family: Roboto Condensed;
 }
 
 #section5-p {
   padding-top: 33px;
   color: #FFFFFF;
   font-size: 16px;
-  font: Roboto;
+  font-family: Roboto;
 }
 
 .section6 {
-  text-align: center;
-  padding-top: 193px;
+  background-image: url("images/slika2");
+  background-attachment: fixed;
+  background-repeat: no-repeat, repeat-y;
+  display: none;
 }
 
 #section6-h1 {
@@ -354,23 +404,70 @@ a {
   border: 1px solid #FF0000;
 }
 
-#section6-image {
-  background-attachment: fixed;
-  background-size: cover;
+.section7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.klasa5 {
-  margin-top: 5000px;
+.section7-top {
+  display: flex;
+  flex-direction: row;
+  gap: 261px;
 }
 
-.klasa6 {
-  margin-top: 5000px;
+.section7-top-right {
+  display: flex;
+  flex-direction: column;
 }
 
-.klasa7 {
-  margin-top: 5000px;
+#section7-top-image {
+  padding-top: 127px;
+  height: 201px;
+  width: 365;
 }
 
-.klasa8 {
-  margin-top: 5000px;
+#section7-h1 {
+  padding-top: 167px;
+  padding-bottom: 32px;
+}
+
+#section7-top-button {
+  border-radius: 30px;
+  background-color: #B50014;
+  width: 174px;
+  height: 47px;
+  color: #FFFFFF;
+  border: white;
+  border: 1px solid;
+}
+
+.section7-top-hr {
+  padding-top: 126px;
+  padding-bottom: 158px;
+}
+
+.section7-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.section7-middle-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-top {
+  height: 147px;
+  background-color: #B50014;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 27px;
+  background-color: #66000B;
 }
