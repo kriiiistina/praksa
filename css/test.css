@@ -449,6 +449,7 @@ a {
 }
 
 .section7-middle {
+  gap: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -460,14 +461,127 @@ a {
   flex-direction: row;
 }
 
+.section7-middle-hr {
+  padding-top: 136px;
+  padding-bottom: 42px;
+}
+
+.image1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#text {
+  padding-top: 14px;
+}
+
+.section7-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#section7-bottom-p {
+  padding-top: 42px;
+  font-size: 18px;
+  padding-bottom: 27px;
+}
+
+#section7-bottom-h1 {
+  font-size: 32px;
+  padding-bottom: 15px;
+}
+
+#section7-bottom-button {
+  border-radius: 30px;
+  background-color: #B50014;
+  width: 174px;
+  height: 47px;
+  color: #FFFFFF;
+  border: white;
+  border: 1px solid;
+  margin-bottom: 76px;
+}
+
 .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 147px;
   background-color: #B50014;
 }
 
-.footer-bottom {
+.footer-top-ul li {
+  font-family: Roboto Condensed;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 9px;
+}
+
+#footer-top-logo {
+  padding-left: 378px;
+  padding-right: 230px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  height: 131px;
+}
+
+.footer-top-icon {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-top-icon ul {
+  text-decoration: none;
+  list-style: none;
+  margin-left: -15px;
+}
+
+.footer-top-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#footer-top-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   height: 27px;
   background-color: #66000B;
+  font-family: Roboto Condensed;
 }
